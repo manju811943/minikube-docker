@@ -42,23 +42,27 @@
 		</dependency>
 	</dependencies>
 
-	<build>
+    <build>
         <finalName>minikube-docker</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.13.0</version>
                 <configuration>
-                    <source>21</source>
-                    <target>21</target>
+                    <release>21</release>
+                    <fork>true</fork>
+                    <executable>/usr/lib/jvm/java-21-openjdk-amd64/bin/javac</executable>
                 </configuration>
             </plugin>
-		</plugins>
-	</build>
+
+        </plugins>
+    </build>
+
 
 </project>
