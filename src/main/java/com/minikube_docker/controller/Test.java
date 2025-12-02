@@ -10,6 +10,7 @@ public class Test {
 
     @GetMapping("message")
     public String getmessage(){
-        return "Thi is minikube setup!";
+
+        return "I'm done with my work!";
     }
 }
